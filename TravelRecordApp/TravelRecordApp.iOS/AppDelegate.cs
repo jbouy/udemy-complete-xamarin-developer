@@ -2,6 +2,7 @@
 using System.IO;
 using Foundation;
 using UIKit;
+using Xamarin;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
@@ -23,6 +24,7 @@ namespace TravelRecordApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             Forms.Init();
+            FormsMaps.Init();
 
             var dbName = "travel_db.sqlite";
             var folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "..",
